@@ -1,0 +1,135 @@
+
+.dataTable{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .dataTable th, .dataTable td{
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+  }
+.dataTable thead tr{
+    background-color: rgb(37, 99, 235);
+    color: #fff;
+    
+  }
+  .dataTable thead tr th{
+
+    width: 10%;
+    min-width: 90px;
+  }
+.dataTable tbody tr:nth-child(even){
+    background-color: #f9f9f9;
+}
+.alignCenter{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.dataTable tbody tr td .actionBtns{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: transparent;
+}
+.btn-primary{
+  background-color: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+.btn-primary:hover{
+  background-color: #2563eb;
+}
+.btn-secondary{
+  background-color: rgb(199, 210, 254);
+  color: #000;
+  cursor: pointer;
+}
+.btn-secondary:hover{
+  background-color: rgb(165, 180, 252);
+}
+
+.tableControls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 20px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+}
+
+.filterBtn {
+  padding: 6px 12px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.filterBtn.active {
+  background: #2563eb;
+  color: white;
+}
+
+.tableTop {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.entriesSelect select {
+  margin: 0 6px;
+  padding: 4px;
+}
+
+.tableBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.pagination {
+  display: flex;
+  gap: 6px;
+}
+
+.pagination button {
+  padding: 6px 10px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background: #2563eb;
+  color: white;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dots {
+  padding: 6px 8px;
+}

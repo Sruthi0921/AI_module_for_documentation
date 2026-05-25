@@ -1,0 +1,76 @@
+body {
+  background: #f4f6f8;
+  font-family: "Inter", sans-serif;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.main {
+  flex: 1;
+  padding: 40px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 450px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.dropzone {
+  border: 2px dashed #ccc;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.table-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.chatbot {
+  width: 350px;
+  background: white;
+  border-left: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-window {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.user {
+  text-align: right;
+  margin: 6px 0;
+}
+
+.bot {
+  color: #555;
+  margin: 6px 0;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+}
