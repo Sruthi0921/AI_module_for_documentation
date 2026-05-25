@@ -1,168 +1,78 @@
-# AI Document Intelligence System
-Dynamic Document Storage and AI-Powered Field Extraction
+# AI Module for Documentation
 
----
+AI-powered document management and analysis system built using React + Node.js.
 
-## Overview
+## Features
 
-This project is an AI-powered document intelligence platform capable of reading, understanding, and structuring any uploaded document without predefined schemas.
+- Upload documents
+- View documents
+- Edit documents
+- AI chatbot support
+- Document search
+- Admin dashboard
+- User dashboard
+- File preview support
+- Semantic search
+- Analytics module
 
-The system automatically extracts raw text, identifies document type, dynamically creates database tables, and stores extracted fields in a structured, human-readable format. It also provides an intelligent chatbot for document and general queries.
+## Tech Stack
 
----
+Frontend:
+- React
+- Vite
+- CSS
 
-## Key Features
+Backend:
+- Node.js
+- Express
 
-- Fast document upload with non-blocking AI processing
-- Supports PDF, Word, Excel, CSV, and Image files
-- AI-driven document type detection
-- Automatic database table creation
-- Dynamic field extraction and storage
-- Same document type stored in the same table
-- New document types create new tables automatically
-- Chatbot with document-aware and admin-aware modes
-- Production-ready architecture
+AI:
+- Embeddings
+- Semantic Search
+- Chunk Processing
 
----
+## Project Structure
 
-## High-Level Workflow
+AI_module_for_documentation/
 
-User uploads document  
-Raw text is extracted  
-Raw data is stored in database  
-AI runs asynchronously  
-AI detects document type  
-AI extracts structured fields  
-Dynamic table is created or reused  
-Data is stored in structured form  
+backend/
+frontend/
 
----
+## Installation
 
-## Architecture
+Clone project
 
-### Frontend
-- React-based UI
-- Document upload interface
-- Chatbot interface for users and admins
+```bash
+git clone https://github.com/Sruthi0921/AI_module_for_documentation.git
+```
 
-### Backend
-- Node.js with Express
-- REST APIs
-- Asynchronous AI execution
-- Dynamic SQL schema handling
+Backend:
 
-### AI Layer
-- Large Language Model (Ollama)
-- Document understanding and extraction
-- Semantic reasoning and field identification
+```bash
+cd backend
+npm install
+npm start
+```
 
-(3 modes : user_document , general chat, admin chat)
+Frontend:
 
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-### Database
-- SQL Server
-- Dynamic schema creation
-- Raw and structured storage
+## Future Enhancements
 
----
+- Authentication
+- Role management
+- OCR
+- AI summaries
+- PDF export
+- Reports
+- Notifications
 
-## Database Design
+## Author
 
-### raw_documents Table
-
-Stores all uploaded documents and extracted raw text.
-
-Fields:
-- id
-- file_name
-- file_type
-- file_path
-- raw_text
-- extracted
-- extraction_status
-- document_type
-- confidence
-- embedding
-- uploaded_at
-
-Purpose:
-- Acts as the source of truth
-- Enables reprocessing and auditing
-- Keeps uploads fast and reliable
-
----
-
-### Dynamic Document Tables
-
-Tables are created automatically per document type.
-
-Examples:
-- documents_aadhaar
-- documents_pan
-- documents_resume
-- documents_invoice
-
-Common structure:
-- id
-- raw_document_id
-- dynamically extracted fields
-- created_at
-
-Rules:
-- Same document type is stored in the same table
-- New document types generate new tables automatically
-
----
-
-### chat_history Table
-
-Stores chatbot interactions.
-
-Fields:
-- id
-- user_id
-- mode
-- question
-- answer
-- created_at
-
----
-
-## Document Upload Flow
-
-Document upload is intentionally fast and non-blocking.
-
-Steps:
-1. File is uploaded
-2. Raw text is extracted
-3. Entry is inserted into raw_documents
-4. Immediate response is sent to frontend
-5. AI extraction runs asynchronously
-
-This ensures good user experience without UI delays.
-
----
-
-## AI Document Extraction
-
-The AI engine performs the following tasks:
-- Detects document type
-- Determines table name
-- Extracts meaningful fields
-- Separates similar data correctly (e.g., Aadhaar vs VID)
-- Returns strict JSON output
-
-Example AI Output:
-
-```json
-{
-  "document_type": "aadhaar",
-  "table_key": "aadhaar",
-  "confidence": 0.96,
-  "fields": [
-    { "name": "aadhaar_number", "value": "123412341234" },
-    { "name": "vid", "value": "1234567890123456" },
-    { "name": "name", "value": "Rahul Kumar" },
-    { "name": "dob", "value": "1999-02-14" }
-  ]
-}
+Sruthi
+ECE Engineer
